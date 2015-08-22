@@ -125,8 +125,12 @@ html,body{height:100%;}
 
 /* How to override the default Bootstrap navbar */
 
+.navbar-padding-top {
+  padding-top: 10px;
+}
 .navbar-transparent {
   background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 .navbar-transparent .navbar-brand,
@@ -143,6 +147,5 @@ html,body{height:100%;}
 .navbar-transparent .navbar-nav > .open > a,
 .navbar-transparent .navbar-nav > .open > a:hover,
 .navbar-transparent .navbar-nav > .open > a:focus {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: yellow;
 }
