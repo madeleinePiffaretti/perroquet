@@ -32,9 +32,9 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu-perroquet">
-          <ul class="nav navbar-nav navbar-padding-top"  id="menu-perroquet-left">
+          <ul class="nav navbar-nav navbar-padding-top">
             <li>
-              <a href="numeros.html">Numéros</a>
+              <a href="#">Numéros</a>
             </li>
             <li>
               <a href="#">Contributeurs</a>
@@ -42,8 +42,9 @@
             <li>
               <a href="#">Sons</a>
             </li>
-          </ul>  
-          <ul class="nav navbar-nav navbar-padding-top" id="menu-perroquet-right">
+            <li>
+              <img src="images/perrocul.png" height=40px>
+            </li>
             <li>
               <a href="#">À Propos</a>
             </li>
@@ -54,70 +55,62 @@
               <a href="#">Contact</a>
             </li>
           </ul>
-          <div id="logo" style="left:30%; ">
-              <img src="images/perrocul.png" height=40px>
-           </div>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container fill container-full-page">
-<div id="myCarousel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="active item">
-      <div class="fill" style="background-image:url('images/background/background_dark.jpg');">
-        <div class="container">
-         <div class="lead">
-        <h1>Perroquet !</h1>
-        <hr class="line-across-small">
-        <hr class="line-across-medium">
-      </div> 
+     <div class="container fill" id="n0">
+     </div>
+    <div class="container fill" id="n1">
+      <div class="row">
+        <div class="col-md-2">
+         <div id="menu-numero">
+            <p><a href="#n0" class="inactive" onclick = "toggle('n0');">#0</a></p>
+            <hr/>
+            <p><a href="#n1" class="active" onclick = "toggle('n1');">#1</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class='list-item' id='list'> 
+            <!--<h4>Contributeurs</h4>-->
+              <ul>
+                <li class='item-writer'><a href='#'>Magali Brénon</a></li> 
+                <li class='item-reader'><a href='#'>Astrid Campion</a></li>
+                <li class='item-writer'><a href='#'>Sarah Cillaire</a></li> 
+                <li class='item-drawer'><a href='#'>Laurent Colomb</a></li>
+                <li class='item-writer'><a href='#'>Michel Fadat</a></li>
+                <li class='item-reader'><a href='#'>Giorgio</a></li>
+                <li class='item-reader'><a href='#'>Joseph Harara</a></li>
+                <li class='item-writer'><a href='#'>Daniel Martin-Borret</a></li>
+                <li class='item-writer'><a href='#'>Sébastien Porte</a></li> 
+                <li class='item-drawer'><a href='#'>Jean Renoux</a></li>
+                <li class='item-drawer'><a href='#'>Noëlle Renaude</a></li>
+                <li class='item-writer'><a href='#'>Bastien Simon</a></li>
+                <li class='item-reader'><a href='#'>Vincent Zuanela</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-md-5">
+            <div class='img-couv'>
+              <img src="images/numeros/n1/couverture.jpg">
+            </div>
         </div>
       </div>
-    </div>
-    <div class="item">
-      <div class="fill" style="background-image:url('images/background/herbe.jpg');">
-        <div class="container">
-         <div class="lead">
-        <h1>À lire partout !</h1>
-        <hr class="line-across-small">
-        <hr class="line-across-medium">
-      </div> 
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="fill" style="background-image:url('images/background/open_book.jpg');">
-        <div class="container">
-         <div class="lead">
-        <h1>Abonnez-vous !</h1>
-        <hr class="line-across-small">
-        <hr class="line-across-medium">
-      </div> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="pull-center">
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-  </div>
-</div>
-</div>
+    </div>  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        
-        $(document).ready(function() {
-        
-            $('.carousel').carousel();
-        
-        });
-        
+    <script>
+      function Hide (addr) { document.getElementById(addr).style.visibility = "hidden"; }
+      function Show (addr) { document.getElementById(addr).style.visibility = "visible";  }
+
+      function toggle(anId)
+      {
+        if (document.getElementById(anId).style.visibility == "hidden") { Show(anId); }
+        else                              { Hide(anId); }
+      }
+
+      window.onload = function () { Hide("n0");  };
     </script>
   </body>
 </html>

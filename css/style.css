@@ -21,31 +21,6 @@ html,body{height:100%;}
   }
 }
 
-/* Footer */
-
-#footer {
-  background-color: #222;
-  color: #aaaaaa;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-#footer a {
-  color: #cccccc;
-}
-
-#footer a:hover {
-  color: white;
-}
-
-.social a {
-  font-size: 24px;
-}
-
-.social a:hover {
-  text-decoration: none;
-}
-
 /* Lead with big image */
 
 .lead {
@@ -86,44 +61,125 @@ html,body{height:100%;}
 }
 
 /* Redefined boostrap container margin */
-.container {
+.container-full-page {
   padding-right: 0px;
   padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* Vertical spacer to help content breathe */
+/* Some padding for couv images */
 
-.vertical-spacer {
-  height: 8em;
+.img-couv img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 1em;
+  max-width:100%;
+  max-height:700px;
 }
 
-/* Some padding for feature images */
-
-.feature img {
-  margin-bottom: 2em;
+.list-item {
+  font-family: 'Gentium Basic';
+  margin-top: 4em;
+  margin-left: 2em;
 }
 
-.feature {
-  color: #444444;
-  font-weight: 300;
-  letter-spacing: 1px;
+#list {
+  text-align: left;
 }
 
-/* How to override the default Bootstrap colors */
-
-.btn-primary {
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+#list ul li {
+  padding: 3px 0;
+  height:30px; 
+  line-height:32px;
+  font-size: 20px; 
 }
 
-.btn-primary:hover {
-  background-color: #16a085;
-  border-color: #16a085;
+.item-writer {
+  list-style-image: url('../images/icon_writer.png');
+}
+
+.item-reader {
+  list-style-image: url('../images/icon_reader.png');
+}
+
+.item-drawer {
+  list-style-image: url('../images/icon_drawer.png');
+}
+
+#list ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#list ul li a:hover {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+#menu-numero {
+  text-align: center;
+}
+#menu-numero p {
+  font-size: 30px;
+}
+
+#menu-numero a {
+  text-decoration: none;
+}
+
+#menu-numero a.active{
+  color: #333;
+}
+
+#menu-numero a.inactive{
+  color: #E6E6E6;
+}
+
+#menu-numero a:hover {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+#menu-numero hr {
+  width: 48px;
+  border: none;
+  border-top: 1px solid black; 
+}
+
+#sound {
+  padding-top: 3em;
 }
 
 /* How to override the default Bootstrap navbar */
+
+#menu-perroquet {
+  width:100%;
+  text-align: center; 
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#menu-perroquet-left{
+  float:left;
+  display:inline-block;
+  margin-left: 20%
+}
+
+#menu-perroquet-right{
+  float:right;
+  display:inline-block;
+  margin-right: 20%
+}
+
+#menu-perroquet li {
+  display:inline-block;
+}
+
+#logo {
+position: absolute; 
+width: 40%; 
+top:10px
+}
 
 .navbar-padding-top {
   padding-top: 10px;

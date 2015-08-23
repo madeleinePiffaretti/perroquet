@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Revue Perroquet</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom navbar-transparent" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-perroquet">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu-perroquet">
+          <ul class="nav navbar-nav navbar-padding-top">
+            <li>
+              <a href="numeros.html">Numéros</a>
+            </li>
+            <li>
+              <a href="#">Contributeurs</a>
+            </li>
+            <li>
+              <a href="#">Sons</a>
+            </li>
+            <li>
+              <img src="images/perrocul.png" height=40px>
+            </li>
+            <li>
+              <a href="#">À Propos</a>
+            </li>
+            <li>
+              <a href="#">Points de vente</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container fill">
+    <div id="sound">
+      <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/revue-perroquet/" width="100%" height="465" scrolling="no" frameborder="no"></iframe>
+    </div>  
+      <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        (function(){
+          var widgetIframe = document.getElementById('sc-widget'),
+              widget       = SC.Widget(widgetIframe);
+
+          widget.bind(SC.Widget.Events.READY, function() {
+            widget.bind(SC.Widget.Events.PLAY, function() {
+              // get information about currently playing sound
+              widget.getCurrentSound(function(currentSound) {
+                console.log('sound ' + currentSound.get('') + 'began to play');
+              });
+            });
+            // get current level of volume
+            widget.getVolume(function(volume) {
+              console.log('current volume value is ' + volume);
+            });
+            // set new volume level
+            widget.setVolume(50);
+            // get the value of the current position
+          });
+
+        }());
+      </script>
+      </body>
+</html>
