@@ -59,15 +59,13 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-     <div class="container fill" id="n0">
-     </div>
     <div class="container fill" id="n1">
       <div class="row">
         <div class="col-md-2">
          <div id="menu-numero">
-            <p><a href="#n0" class="inactive" onclick = "toggle('n0');">#0</a></p>
+            <p><a href="#n0" class="inactive">#0</a></p>
             <hr/>
-            <p><a href="#n1" class="active" onclick = "toggle('n1');">#1</a></p>
+            <p><a href="#n1" class="active">#1</a></p>
           </div>
         </div>
         <div class="col-md-4">
@@ -100,17 +98,5 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script>
-      function Hide (addr) { document.getElementById(addr).style.visibility = "hidden"; }
-      function Show (addr) { document.getElementById(addr).style.visibility = "visible";  }
-
-      function toggle(anId)
-      {
-        if (document.getElementById(anId).style.visibility == "hidden") { Show(anId); }
-        else                              { Hide(anId); }
-      }
-
-      window.onload = function () { Hide("n0");  };
-    </script>
   </body>
 </html>
