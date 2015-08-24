@@ -21,6 +21,38 @@ html,body{height:100%;}
   }
 }
 
+@media (min-width: 767px) { 
+#propos {
+  padding-top: 6em;
+}
+}
+
+#propos{
+  background-image: url('../images/background/perro_b_w.png'); 
+}
+
+p {
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.col-max {
+    /* custom max width */
+    max-width:400px;
+}
+
 /* Lead with big image */
 
 .lead {
